@@ -176,6 +176,13 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        
+        Mews\Captcha\CaptchaServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
+        GrahamCampbell\Markdown\MarkdownServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
+        Stevenyangecho\UEditor\UEditorServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
 
     ],
 
@@ -225,6 +232,13 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Form'      => Collective\Html\FormFacade::class,
+        'Input'     => Illuminate\Support\Facades\Input::class,
+        'HTML'      => Collective\Html\FormFacade::class,
+        'Captcha'   => Mews\Captcha\Facades\Captcha::class,
+        'Socialize' => Laravel\Socialite\Facades\Socialite::class,
+        'Markdown'  => GrahamCampbell\Markdown\Facades\Markdown::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
 
     ],
 

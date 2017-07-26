@@ -1,0 +1,108 @@
+.folder-list { list-style: none;}
+.folder-list li a {
+    color: #666666;
+    display: block;
+    padding: 5px 0;
+}
+.folder-list li {
+    border-bottom: 1px solid #e7eaec;
+    display: block;
+}
+.folder-list li i {
+    color: #3d4d5d;
+    margin-right: 8px;
+}
+.category-list li a {
+    color: #666666;
+    display: block;
+    padding: 5px 0;
+}
+.category-list li {
+    display: block;
+}
+.category-list li i {
+    color: #3d4d5d;
+    margin-right: 8px;
+}
+
+.mail-box-header { padding: 30px 20px 20px; background: #fff;}
+
+table.table-mail tr td {
+    padding: 12px;
+}
+.table-mail .check-mail {
+    padding-left: 20px;
+}
+.table-mail .mail-date {
+    padding-right: 20px;
+}
+.star-mail, .check-mail {
+    width: 40px;
+}
+.unread td a, .unread td {
+    color: inherit;
+    font-weight: 600;
+}
+.read td a, .read td {
+    color: inherit;
+    font-weight: normal;
+}
+.unread td {
+    background-color: #f9f8f8;
+}
+.mail-box { background : #fff; }
+
+.mail-box-header h2 {
+    margin-top: 0;
+}
+.mailbox-content .tag-list li a {
+    background: #ffffff none repeat scroll 0 0;
+}
+.mail-body {
+    border-top: 1px solid #e7eaec;
+    padding: 20px;
+}
+.mail-text {
+    border-top: 1px solid #e7eaec;
+}
+.mail-text .note-toolbar {
+    padding: 10px 15px;
+}
+.mail-body .form-group {
+    margin-bottom: 5px;
+}
+.mail-text .note-editor .note-toolbar {
+    background-color: #f9f8f8;
+}
+.mail-attachment {
+    border-top: 1px solid #e7eaec;
+    font-size: 12px;
+    padding: 20px;
+}
+.mailbox-content {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: medium none;
+    padding: 10px;
+}
+.mail-ontact {
+    width: 23%;
+}
+
+ul.notes li, ul.tag-list li {
+    list-style: outside none none;
+}
+
+.tag-list li {
+    float: left;
+}
+.tag-list li a {
+    background-color: #f3f3f4;
+    border: 1px solid #e7eaec;
+    border-radius: 2px;
+    color: inherit;
+    display: block;
+    font-size: 10px;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding: 5px 12px;
+}
