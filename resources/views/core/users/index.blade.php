@@ -79,8 +79,10 @@
 					 	@elseif($field['field'] =='active')
 							{!! ($row->active ==1 ? '<lable class="label label-success">Active</label>' : '<lable class="label label-danger">Inactive</label>')  !!}
 								
-						@else	
-							{{--*/ $conn = (isset($field['conn']) ? $field['conn'] : array() ) /*--}}
+						@else
+							@php
+								$conn = (isset($field['conn']) ? $field['conn'] : array() )
+							@endphp
 							{!! SiteHelpers::gridDisplay($row->{$field['field']},$field['field'],$conn) !!}		
 						@endif						 
 					 </td>

@@ -1,10 +1,10 @@
 <?php namespace App\Models\Core;
 
-use App\Models\Sximo;
+use App\Models\HsCms;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 
-class Logs extends Sximo  {
+class Logs extends HsCms  {
 	
 	protected $table = 'tb_logs';
 	protected $primaryKey = 'auditID';

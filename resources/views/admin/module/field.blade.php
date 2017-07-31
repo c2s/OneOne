@@ -1,4 +1,4 @@
-<script type="text/javascript" src="{{ asset('admin/js/simpleclone.js') }}" ></script>
+<script type="text/javascript" src="{{ asset('static/js/simpleclone.js') }}" ></script>
 
 <script>
 responOptData('<?php echo $f['option']['opt_type'];?>');

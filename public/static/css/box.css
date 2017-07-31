@@ -1,0 +1,22 @@
+/*初始化*/
+body,h1,h2,h3,h4,h5,h6,dl,dt,dd,ul,ol,li,th,td,p,blockquote,pre,form,egend,input,button,textarea,hr { margin:0; padding:0; }
+h1,h2,h3,h4,h5,h6 { font-size:100%; }
+ul { list-style:none; }
+ol { padding-left:20px; }
+img { border:0; }
+q:before,q:after { content:''; }
+abbr[title] { border-bottom:1px dotted; cursor:help; }
+button,input,select,textarea { font-size:100%; }
+
+img { border:none; }
+a { color:#23b7e5; text-decoration:none; }
+a:hover { color:#23b7e5; }
+.clear{ clear:both; }
+input,button,select,textarea{outline:none}
+textarea{resize:none}
+
+
+
+
+
+

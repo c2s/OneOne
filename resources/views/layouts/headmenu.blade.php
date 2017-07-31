@@ -23,7 +23,7 @@
 				
 			endforeach;?>
 			<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"><i class="fa fa-language nav-icon"> </i>
-				<img class="flag-lang" src="{{ asset('static/images/flags/'.$flag.'.png') }}" width="16" height="12" alt="lang" /> {{ strtoupper($flag) }}
+				<img class="flag-lang" src="{{ asset('static/images/flags/'.$flag.'.png') }}" width="16" height="12" alt="lang" /> {{ $langname }}
 				<span class="hidden-xs">
 				 <i class="fa fa-angle-down"></i>
 				</span>

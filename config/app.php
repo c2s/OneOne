@@ -183,6 +183,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Stevenyangecho\UEditor\UEditorServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
     ],
 

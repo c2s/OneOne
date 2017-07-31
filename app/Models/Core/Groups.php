@@ -1,12 +1,12 @@
 <?php namespace App\Models\Core;
 
-use App\Models\Sximo;
+use App\Models\HsCms;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 
-class Groups extends Sximo  {
+class Groups extends HsCms  {
 	
-	protected $table = 'tb_groups';
+	protected $table = 'groups';
 	protected $primaryKey = 'group_id';
 
 	public function __construct() {

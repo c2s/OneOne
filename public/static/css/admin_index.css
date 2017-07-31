@@ -1,0 +1,57 @@
+
+.index_box{  padding:0px;}
+.index_box section{ border:1px solid #ddd; background:#fff!important; margin-bottom:10px; }
+.index_box section h3{ height:38px; line-height:38px; padding-left:15px; background:#f7f7f7; border-bottom:1px solid #ddd; font-size:14px; font-weight:normal; color:#656565; position:relative;}
+.index_box section h3 a{ position:absolute;right:10px; }
+.index_box section h3 a i{ margin-left:5px; }
+
+.index_point ul{ height:105px; padding:10px; }
+.index_point ul li{ float:left; height:85px; width:20%; text-align:center; position:relative; cursor:pointer; }
+.index_point ul li.line{ width:20px; }
+.index_point ul li a{ color:#777; display:block; }
+.index_point ul li a i{ display:block; font-size:30px; margin:17px 0px 2px;}
+.index_point ul li i.fa-angle-right{ display:block; font-size:60px; position:absolute; right:-10px; top:50%; margin-top:-30px; color:#eee;}
+.index_point ul li a:hover{ color:#1784bd; }
+.index_point ul li a:hover i{ color:#1784bd; }
+.bdshare_popup_box{ display:none!important;}
+
+.index_point ul li.on div{background:#1784bd;}
+.index_point ul li.on div i{background:#1784bd;}
+
+.index_stat .row{ padding:10px 0px 5px; }
+.index_stat_table table{ border:1px solid #ddd; width:100%; color:#666; font-size:13px; }
+.index_stat_table table th{ background:#f7f7f7; border:1px solid #ddd; padding:7px 10px; font-weight:normal; white-space:nowrap; text-align:left;}
+.index_stat_table table tr.met_hover td{ background:#f7f7f7!important; }
+.index_stat_table table td{ background:#fff; border:1px solid #ddd; padding:5px 10px; white-space:nowrap; }
+
+.index_stat_chart_tips{ color:#999; height:20px; line-height:20px; }
+.index_stat_chart_tips ul{ float:right; }
+.index_stat_chart_tips ul li{ float:right; margin-right:10px; }
+.index_stat_chart_tips ul li i{ float:left; width:9px; height:9px; background:red; margin-right:5px; position:relative; top:6px; }
+.index_stat_chart_tips i.ip{ background:#23ad44; }
+.index_stat_chart_tips i.uv{ background:#7266ba; }
+.index_stat_chart_tips i.pv{ background:#23b7e5; }
+
+.index_hotapp .row{ padding:10px 0px; }
+.index_hotapp .media-heading{ font-size:15px; color:#333;  }
+.index_hotapp .media-heading span{ padding-left:20px;  }
+.index_hotapp .media{ padding:10px; height:102px; overflow:hidden;  }
+.index_hotapp .media:hover{ background:#F4F5F9;}
+.index_hotapp .media-body{ padding:5px 0px; color:#333;}
+.index_hotapp .media-body p{ color:#777; line-height:1.8; height:50px; overflow:hidden; margin-top:8px; font-size:13px; }
+
+.through{  text-decoration:line-through; }
+
+.index_news{ margin-bottom:0px!important;}
+.index_news li{ height:40px; line-height:40px; padding:0px 15px; border-bottom:1px solid #f5f5f5; font-size:13px; position:relative;}
+.index_news li span{ float:right; color:#999; }
+.index_news li a{ color:#666!important; }
+.index_news li a:hover{ color:#1784bd!important; }
+.index_news li:last-child{ border-bottom:0; }
+
+
+
+
+
+
+

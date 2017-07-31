@@ -1,8 +1,8 @@
  @extends('layouts.app')
 
 @section('content')
-<script type="text/javascript" src="{{ asset('admin/js/plugins/jquery.fileTree/jqueryFileTree.js') }}"></script>
-<link href="{{ asset('admin/js/plugins/jquery.fileTree/jqueryFileTree.css') }}" rel="stylesheet">
+<script type="text/javascript" src="{{ asset('static/js/plugins/jquery.fileTree/jqueryFileTree.js') }}"></script>
+<link href="{{ asset('static/js/plugins/jquery.fileTree/jqueryFileTree.css') }}" rel="stylesheet">
 
   <div class="page-content row ">
     <!-- Page header -->

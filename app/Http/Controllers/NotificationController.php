@@ -16,8 +16,7 @@ class NotificationController extends Controller {
 
 	public function __construct()
 	{
-		
-		$this->beforeFilter('csrf', array('on'=>'post'));
+
 		$this->model = new Notification();
 		
 		$this->info = $this->model->makeInfo( $this->module);
@@ -83,6 +82,7 @@ class NotificationController extends Controller {
 		// Master detail link if any 
 		$this->data['subgrid']	= (isset($this->info['config']['subgrid']) ? $this->info['config']['subgrid'] : array()); 
 		// Render into template
+
 		return view('notification.index',$this->data);
 	}	
 

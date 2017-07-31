@@ -18,7 +18,6 @@ class LogsController extends Controller {
 	{
 		
 		parent::__construct();
-		$this->beforeFilter('csrf', array('on'=>'post'));
 		$this->model = new Logs();
 		$this->info = $this->model->makeInfo( $this->module);
 		$this->access = $this->model->validAccess($this->info['id']);

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <script type="text/javascript" src="{{ asset('admin/js/simpleclone.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('static/js/simpleclone.js') }}"></script>
   <div class="page-content row">
  	<div class="page-content-wrapper m-t">
 

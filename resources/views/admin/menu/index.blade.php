@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<script type="text/javascript" src="{{ asset('admin/js/plugins/jquery.nestable.js') }}"></script>
+<script type="text/javascript" src="{{ asset('static/js/plugins/jquery.nestable.js') }}"></script>
 
   <div class="page-content row">
 

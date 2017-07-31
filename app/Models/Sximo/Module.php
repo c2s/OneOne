@@ -1,9 +1,9 @@
 <?php namespace App\Models\Sximo;
 
-use App\Models\Sximo;
+use App\Models\HsCms;
 use Illuminate\Database\Eloquent\Model;
 
-class Module extends Sximo {
+class Module extends HsCms {
 
 	protected $table 		= 'tb_module';
 	protected $primaryKey 	= 'module_id';

@@ -3,360 +3,243 @@
 
 @section('content')
 
-<script type="text/javascript" src="{{ asset('admin/js/plugins/chartjs/Chart.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('static/js/plugins/chartjs/Chart.min.js') }}"></script>
+
 <div class="page-content row">
 
-	<div class="page-content-wrapper m-t">  
-	
-	
-	@if(Auth::check() && Auth::user()->group_id == 1)
- 
-<section class="ribon-sximo"> 
-	<div class="row m-l-none m-r-none m-t  white-bg shortcut ribon "  >
-		<div class="col-sm-6 col-md-3  p-sm ribon-module">
-			<span class="pull-left m-r-sm text-navy"><i class="fa fa-table"></i></span> 
-			<a href="{{ URL::to('admin/module') }}" class="clear">
-				<span class="h3 block m-t-xs"><strong>  {{ Lang::get('core.dash_i_module') }}  </strong>
-				</span> <small>  {{ Lang::get('core.dash_module') }}</small>
-			</a>
-		</div>
-		<div class="col-sm-6 col-md-3   p-sm ribon-setting">
-			<span class="pull-left m-r-sm ">	<i class="icon-steam2"></i></span>
-			<a href="{{ URL::to('admin/config') }}" class="clear">
-				<span class="h3 block m-t-xs"><strong> {{ Lang::get('core.dash_i_setting') }}</strong>
-				</span> <small >   {{ Lang::get('core.dash_setting') }} </small> 
-			</a>
-		</div>
-		<div class="col-sm-6 col-md-3   p-sm ribon-menu">
-			<span class="pull-left m-r-sm ">	<i class="icon-list"></i></span>
-			<a href="{{ URL::to('admin/menu') }}" class="clear">
-			<span class="h3 block m-t-xs"><strong>  {{ Lang::get('core.dash_i_sitemenu') }} </strong></span>
-			<small>  {{ Lang::get('core.dash_sitemenu') }}  </small> </a>
-		</div>
-		<div class="col-sm-6 col-md-3  p-sm ribon-users">
-			<span class="pull-left m-r-sm ">	<i class="icon-users"></i></span>
-			<a href="{{ URL::to('core/users') }}" class="clear">
-			<span class="h3 block m-t-xs"><strong> {{ Lang::get('core.dash_i_usergroup') }}</strong>
-			</span> <small >  {{ Lang::get('core.dash_usergroup') }} </small> </a>
-		</div>
-	</div> 
-</section>	
+	<div class="page-content-wrapper m-t">
+@if(Auth::check() && Auth::user()->group_id == 1)
 
+<section class="ribon-sximo">
+
+
+    <div class="index_box">
+        <section class="index_point hidden-xs">
+            <h3>首页引导
+            </h3><div class="container-fluid">
+                <ul>
+
+                    <li>
+                        <a href="{{ URL::to('admin/config') }}" class="clear">
+                            <i class="icon-steam2"></i>
+                            {{ Lang::get('core.dash_i_sitemenu') }}
+                        </a>
+                        <i class="fa fa-angle-right"></i>
+                    </li>
+                    <li>
+                        <a href="{{ URL::to('admin/module') }}" class="clear">
+                            <i class="fa fa-table"></i>
+                            {{ Lang::get('core.dash_i_module') }}
+                        </a>
+                        <i class="fa fa-angle-right"></i>
+                    </li>
+                    <li>
+                        <a href="{{ URL::to('admin/menu') }}" class="clear">
+                            <i class="icon-list"></i>
+                            {{ Lang::get('core.dash_i_setting') }}
+                        </a>
+                        <i class="fa fa-angle-right"></i>
+                    </li>
+
+                    <li>
+                        <a href="{{ URL::to('admin/module') }}" class="clear">
+                            <i class="fa fa-plus"></i>
+                            {{ Lang::get('core.dash_i_create_content') }}
+                        </a>
+                        <i class="fa fa-angle-right"></i>
+                    </li>
+                    <li>
+                        <a href="{{ URL::to('core/users') }}" class="clear">
+                            <i class="icon-users"></i>
+                            {{ Lang::get('core.dash_i_usergroup') }}
+                        </a>
+                        <i class="fa fa-angle-right"></i>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+
+    </div>
+</section>
 @endif
+    <link href="{{ asset('static/css/admin_index.css')}}" rel="stylesheet">
+    <link href="{{ asset('static/css/box.css')}}" rel="stylesheet">
 
-
-<div class="row m-t">  
-
-
-
-            		<div class="col-lg-9">
-            			<div class="row m-t">
-                			<div class="col-lg-12">
-        						<div class="sbox">     						
-                                    <div class="sbox-content">
-                                        <div>
-                                            <span class="pull-right text-right">
-                                                <small>Average value of sales in the past month in: <strong>United states</strong></small>
-                                                    <br>
-                                                   <span class="text-warning"> All sales: 712,862 </span>
-                                            </span>
-                                            <h1 class="m-b-xs">$ 115,992</h1>
-                                            <h3 class="font-bold no-margins">
-                                                <span class="text-danger">{{ date("Y")}}</span> revenue margin
-                                            </h3>
-                                            <small>Sales marketing.</small>
-                                        </div>
-
-                                        <div>
-                                            <div height="191" id="lineChart" style=" width: 100%;margin: 10px 0 ; height: 191px; background: #dadada;" >
-                                                <p style="padding: 80px 0; font-size: 20px; text-align: center;">
-                                                Your Charts Goes Here ...
-                                                </p>
-
-                                            </div>
-                                        </div>
-
-                                        <div class="m-t-md">
-                                            <small class="pull-right">
-                                                <i class="fa fa-clock-o"> </i>
-                                                Update on 16.07.2015
-                                            </small>
-                                           <small>
-                                               <strong>Analysis of sales:</strong> The value has been changed over time, and last month reached a level over $50,000.
-                                           </small>
-                                        </div>
-                                    </div><!-- /sbox-content -->
-
-
-        						</div><!-- /sbox -->
-        					</div><!-- </div class="col-lg-12"> -->
-                        </div><!-- </div class="row-mt"> -->
-
+    <div id="metcmsbox">
+            <div class="index_box">
+                <section class="index_stat">
+                    <h3>访问概况</h3>
+                    <div class="container-fluid">
                         <div class="row">
-                            <div class="col-lg-4">
-                                <div class="sbox">
+                            <div class="col-md-7 index_stat_chart">
+                                <div class="index_stat_chart_tips">
+                                    <ul>
+                                        <li><i class="ip"></i>IP</li>
+                                        <li><i class="uv"></i>独立访客</li>
+                                        <li><i class="pv"></i>浏览次数（PV）</li>
+                                    </ul>
+                                    近8小时流量趋势
+                                </div>
+                                <canvas id="myChart" height="752" width="1554" style="width: 777px; height: 376px;"></canvas>
+                            </div>
+                            <div class="col-md-5 index_stat_table">
+                                <table cellpadding="0" cellspacing="1" class="stat_table">
+                                    <tbody><tr class="">
+                                        <th width="25%">日期</th>
+                                        <th width="25%">PV</th>
+                                        <th width="25%">独立访客</th>
+                                        <th width="25%">IP</th>
+                                    </tr>
 
-                                    <div class="sbox-title">
-                                        <span class="label label-info pull-right">Today</span>
-                                        <h5>Title</h5>
-                                    </div>
-                                    <div class="sbox-content">
-                                        <h2>76.886.200</h2>
-                                        <div class="stat-percent font-bold text-info">98% <i class="fa fa-level-up"></i></div>
-                                        <small>New Orders</small>
-                                    </div>
+                                    <tr class="">
+                                        <td>今天</td>
+                                        <td>798</td>
+                                        <td>209</td>
+                                        <td>200</td>
+                                    </tr>
 
-                                </div><!-- /sbox -->
-                            </div><!-- </div class="col-lg-4"> -->
-                            <div class="col-lg-4">
-                                <div class="sbox">
+                                    <tr class="">
+                                        <td>昨天</td>
+                                        <td>1095</td>
+                                        <td>303</td>
+                                        <td>291</td>
+                                    </tr>
 
-                                    <div class="sbox-title">
-                                        <span class="label label-success pull-right">Monthly</span>
-                                        <h5>Title</h5>
-                                    </div>
-                                    <div class="sbox-content">
-                                        <h2>111.886.200</h2>
-                                        <div class="stat-percent font-bold text-success">98% <i class="fa fa-level-up"></i></div>
-                                        <small>New Orders</small>
-                                    </div>
+                                    <tr class="">
+                                        <td>2017-07-24</td>
+                                        <td>1043</td>
+                                        <td>250</td>
+                                        <td>239</td>
+                                    </tr>
 
-                                </div><!-- /sbox -->
-                            </div><!-- </div class="col-lg-4"> -->
-                            <div class="col-lg-4">
-                                <div class="sbox">
+                                    <tr>
+                                        <td>2017-07-23</td>
+                                        <td>259</td>
+                                        <td>55</td>
+                                        <td>55</td>
+                                    </tr>
 
-                                    <div class="sbox-title">
-                                        <span class="label label-warning pull-right">Annual</span>
-                                        <h5>Title</h5>
-                                    </div>
-                                    <div class="sbox-content">
-                                        <h2>$ 870.886.200</h2>
-                                        <div class="stat-percent font-bold text-warning">98% <i class="fa fa-level-up"></i></div>
-                                        <small>New Orders</small>
-                                    </div>
+                                    <tr>
+                                        <td>2017-07-22</td>
+                                        <td>418</td>
+                                        <td>102</td>
+                                        <td>98</td>
+                                    </tr>
 
-                                </div><!-- /sbox -->
-                            </div><!-- </div class="col-lg-4"> -->
+                                    </tbody></table>
+                            </div>
                         </div>
+                    </div>
+                    <div class="clear"></div>
+                </section>
 
+                <section class="index_hotapp index_hot">
+                    <h3>推荐应用<a href="http://demo.metinfo.cn/admin/index.php?lang=cn&amp;anyid=65&amp;n=appstore&amp;c=appstore&amp;a=doindex">更多应用<i class="fa fa-angle-right"></i></a>
+                    </h3>
+                    <div class="container-fluid">
                         <div class="row">
-                            <div class="col-lg-6">
-                                
-                                <div class="sbox">
-                                    <div class="sbox-title">
-                                        <h4>Read below comments and tweets  
-                                            <a class="pull-right" href="#" data-dismiss="alert">
-                                                <i class="fa fa-times"></i>&nbsp;
-                                            </a>
-                                            <a class="pull-right" href="#">
-                                                <i class="fa fa-wrench"></i>&nbsp;
-                                            </a>
-                                            <a class="pull-right" href="#collapseTwo" data-parent="#accordion" data-toggle="collapse">
-                                                <i class="fa fa-chevron-up"></i>&nbsp;                                    
-                                            </a>
-                                        </h4>
-                                    </div><!-- </div class="sbox-title"> -->
-
-                                    <div id="collapseTwo" class="collapse in" style="height: auto;">    
-                                        <div class="sbox-content" id="1" style="background-color:white;">
-                                            <div class="feed-activity-list">
-
-                                                <div class="feed-element">
-                                                    <p><a href="#" class="text-info">@mangopik</a> I belive that. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                                    <small class="block text-muted"><i class="fa fa-clock-o"></i> 1 minuts ago</small>
-                                                </div>
-                                                <hr/>
-                                                <div class="feed-element">
-                                                    <p><a href="#" class="text-info">@sximo</a> Check this stock chart. This price is crazy! </p>                                           
-                                                    <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 hours ago</small>
-                                                </div>
-                                                <hr/>
-                                                <div class="feed-element">
-                                                    <p><a href="#" class="text-info">@sximo</a> Lorem ipsum unknown printer took a galley </p>
-                                                    <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 minuts ago</small>
-                                                </div>
-                                                <hr/>
-                                                <div class="feed-element">
-                                                    <p><a href="#" class="text-info">@sximo</a> I belive that. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                                    <small class="block text-muted"><i class="fa fa-clock-o"></i> 1 minuts ago</small>
-                                                </div>
-                                                <hr/>
-                                                <div class="feed-element">
-                                                    <p><a href="#" class="text-info">@mangopik</a> Lorem ipsum unknown printer took a galley </p>
-                                                    <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 minuts ago</small>
-                                                </div>        
-
-                                            </div>
-                                        </div><!-- </div class="sbox-content">  --> 
+                            <div class="col-md-4 col-sm-6 col-xs-12 index_stat_chart">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="http://demo.metinfo.cn/admin/index.php?lang=cn&amp;n=appstore&amp;c=appstore&amp;a=doappdetail&amp;type=app&amp;no=10066&amp;anyid=65"><img src="./10066.png" class="media-object" width="80"></a>
+                                    </div>
+                                    <div class="media-body">
+                                        <a href="http://demo.metinfo.cn/admin/index.php?lang=cn&amp;n=appstore&amp;c=appstore&amp;a=doappdetail&amp;type=app&amp;no=10066&amp;anyid=65">
+                                            <h4 class="media-heading">图片云加速-七牛<span class="text-danger"></span></h4>
+                                            <p><p>通过七牛云存储给网站图片加速，极大提升图片加载速度，让网站秒开！</p><p>不支持阿里云、西部数码等空间商的默认<span style="color: rgb(255, 0, 0);">测试域名</span>使用，如&nbsp;<span style="color: rgb(136, 136, 136); font-family: PingFangSC-Light, &quot;helvetica neue&quot;, &quot;hiragino sans gb&quot;, arial, &quot;microsoft yahei ui&quot;, &quot;microsoft yahei&quot;, simsun, sans-serif;">qyu20170620.my3w.com</span></p></p>
+                                        </a>
                                     </div>
                                 </div>
-                            </div><!-- </div class="col-lg-6"> -->
-                            <div class="col-lg-6">
-                                <div class="sbox">
-                                    
-                                    <div class="sbox-title">
-                                        <h4>Timeline&nbsp;<span class="label label-primary">Meeting Today</span>
-                                            <a class="pull-right" href="#" data-dismiss="alert">
-                                                <i class="fa fa-times"></i>&nbsp;
-                                            </a>
-                                            <a class="pull-right" href="#">
-                                                <i class="fa fa-wrench"></i>&nbsp;
-                                            </a>
-                                            <a class="pull-right" href="#collapseThree" data-parent="#accordion" data-toggle="collapse">
-                                                <i class="fa fa-chevron-up"></i>&nbsp;                                    
-                                            </a>
-                                        </h4>
-                                    </div><!-- </div class="sbox-title"> -->
-
-                                    <div id="collapseThree" class="collapse in" style="height: auto;">    
-                                        <div class="sbox-content" id="1">
-
-                                            <div id="collapseThree">                                               
-                                                                       
-                                                    <div class="row m-t">
-                                                        <div class="col-xs-3">
-                                                            6:00 am
-                                                            <br>
-                                                            <small class="text-navy">2 hour ago</small>
-                                                        </div>
-                                                        <div class="well col-xs-7 content no-top-border" >
-                                                            <p class="m-b-xs"> <i class="fa fa-briefcase"></i> &nbsp;<strong>Meeting</strong></p>
-
-                                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
-                                                            <p>
-                                                                <span class="updating-chart" data-diameter="40" style="display: none;">
-                                                                    7,1,2,6,8,10,6,0,7,9,0,6,5,6,10,8,6,6,4,4,1,3,10,8,4,10,4,10,6,7,5,8,5,2,7,4,10
-                                                                </span>
-                                                                <svg class="peity" height="16" width="64">
-                                                                    <polygon fill="#1ab394" points="0 15 0 5 1.7777777777777777 14 3.5555555555555554 12.5 5.333333333333333 6.5 7.111111111111111 3.5 8.88888888888889 0.5 10.666666666666666 6.5 12.444444444444443 15.5 14.222222222222221 5 16 2 17.77777777777778 15.5 19.555555555555554 6.5 21.333333333333332 8 23.11111111111111 6.5 24.888888888888886 0.5 26.666666666666664 3.5 28.444444444444443 6.5 30.22222222222222 6.5 32 9.5 33.77777777777778 9.5 35.55555555555556 14 37.33333333333333 11 39.11111111111111 0.5 40.888888888888886 3.5 42.666666666666664 9.5 44.44444444444444 0.5 46.22222222222222 9.5 48 0.5 49.77777777777777 6.5 51.55555555555555 5 53.33333333333333 8 55.11111111111111 3.5 56.888888888888886 8 58.666666666666664 12.5 60.44444444444444 5 62.22222222222222 9.5 64 0.5 64 15"/>
-                                                                    <polyline fill="transparent" points="0 5 1.7777777777777777 14 3.5555555555555554 12.5 5.333333333333333 6.5 7.111111111111111 3.5 8.88888888888889 0.5 10.666666666666666 6.5 12.444444444444443 15.5 14.222222222222221 5 16 2 17.77777777777778 15.5 19.555555555555554 6.5 21.333333333333332 8 23.11111111111111 6.5 24.888888888888886 0.5 26.666666666666664 3.5 28.444444444444443 6.5 30.22222222222222 6.5 32 9.5 33.77777777777778 9.5 35.55555555555556 14 37.33333333333333 11 39.11111111111111 0.5 40.888888888888886 3.5 42.666666666666664 9.5 44.44444444444444 0.5 46.22222222222222 9.5 48 0.5 49.77777777777777 6.5 51.55555555555555 5 53.33333333333333 8 55.11111111111111 3.5 56.888888888888886 8 58.666666666666664 12.5 60.44444444444444 5 62.22222222222222 9.5 64 0.5" stroke="#169c81" stroke-width="1" stroke-linecap="square"/>
-                                                                </svg>
-                                                            </p>
-                                                        </div>                                
-                                                    </div>
-                                                     <div class="row m-t">
-                                                        <div class="col-xs-3">
-                                                            6:00 am
-                                                            <br>
-                                                            <small class="text-navy">2 hour ago</small>
-                                                        </div>
-                                                        <div class="well col-xs-7 content no-top-border" >
-                                                            <p class="m-b-xs">  <i class="fa fa-file-text"></i> &nbsp;<strong>Conference</strong></p>
-                                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
-                                                        </div>                                
-                                                    </div>
-                                                      
-                                             
-                                            </div>
-
-                                        </div><!-- </div class="sbox-content">  --> 
-                                    </div>                     
-                                </div><!-- /sbox -->
-                            </div><!-- </div class="col-lg-6"> -->
-                        </div><!-- </div class="row"> -->
-
-            		</div><!-- </div class="col-lg-9"> -->
-
-                        <div class="col-lg-3" style="background-color:#ebebed;">
-                            
-                            <div class="" style="height: 1196px;">
-                          
-                                    <h3>Title <span class="badge badge-info pull-right">16</span></h3>
-                                   
-                                    <div class="feed-activity-list">               
-                                        <div class="feed-element">
-                                            <a class="pull-left" href="#">
-                                                <img width="50" border="0" title="" class="img-circle tips" src="{{ asset('uploads/images/no-image-rounded.png') }}">&nbsp;
-                                            </a>
-                                            <div>                                                            
-                                                <small>There are many variations of passages of Lorem Ipsum available.</small>
-                                                <br/>
-                                                <small class="text-muted">Today 1:21 pm</small>                  
-                                            </div>
-                                        </div>
-                                        <hr/>
-                                    
-                                    </div><!-- </div class="feed-activity-list">  -->      
-                                 
-                                    <div class="feed-activity-list">               
-                                        <div class="feed-element">
-                                            <a class="pull-left" href="#">
-                                                <img width="50" border="0" title="" class="img-circle tips" src="{{ asset('uploads/images/no-image-rounded.png') }}">&nbsp;
-                                            </a>
-
-                                            <div>                                                            
-                                                <small>TIt is a long established fact that.</small>
-                                                <br/>
-                                                <small class="text-muted">Yesterday 2:11 am</small>                  
-                                            </div>
-                                        </div>
-                                        <hr/>
-                                    
-                                    </div><!-- </div class="feed-activity-list">  -->
-
-                                    <div class="feed-activity-list">               
-                                        <div class="feed-element">
-                                            <a class="pull-left" href="#">
-                                                <img width="50" border="0" title="" class="img-circle tips" src="{{ asset('uploads/images/no-image-rounded.png') }}">&nbsp;
-                                            </a>
-
-                                            <div>                                                            
-                                                <small>The generated Lorem Ipsum is therefore always free.</small>
-                                                <br/>
-                                                <small class="text-muted">Monday 4:11 pm</small>                  
-                                            </div>
-                                        </div>
-                                        <hr/>
-                                    
-                                    </div><!-- </div class="feed-activity-list">  -->
-
-                                    <div class="m-t-md">
-                                        <h4>Title</h4>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
-                                        </p>
-                                        <div class="row m-t-sm">
-                                            <div class="col-md-6">
-                                                <span class="bar" style="display: none;">5,3,9,6,5,9,7,3,5,2</span><svg class="peity" height="16" width="32"><rect fill="#1ab394" x="0" y="7.111111111111111" width="2.3" height="8.88888888888889"/><rect fill="#d7d7d7" x="3.3" y="10.666666666666668" width="2.3" height="5.333333333333333"/><rect fill="#1ab394" x="6.6" y="0" width="2.3" height="16"/><rect fill="#d7d7d7" x="9.899999999999999" y="5.333333333333334" width="2.3" height="10.666666666666666"/><rect fill="#1ab394" x="13.2" y="7.111111111111111" width="2.3" height="8.88888888888889"/><rect fill="#d7d7d7" x="16.5" y="0" width="2.3" height="16"/><rect fill="#1ab394" x="19.799999999999997" y="3.555555555555557" width="2.3" height="12.444444444444443"/><rect fill="#d7d7d7" x="23.099999999999998" y="10.666666666666668" width="2.3" height="5.333333333333333"/><rect fill="#1ab394" x="26.4" y="7.111111111111111" width="2.3" height="8.88888888888889"/><rect fill="#d7d7d7" x="29.7" y="12.444444444444445" width="2.3" height="3.5555555555555554"/></svg>
-                                                <h5><strong>169</strong> Posts</h5>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <span class="line" style="display: none;">5,3,9,6,5,9,7,3,5,2</span><svg class="peity" height="16" width="32"><polygon fill="#1ab394" points="0 15 0 7.166666666666666 3.5555555555555554 10.5 7.111111111111111 0.5 10.666666666666666 5.5 14.222222222222221 7.166666666666666 17.77777777777778 0.5 21.333333333333332 3.833333333333332 24.888888888888886 10.5 28.444444444444443 7.166666666666666 32 12.166666666666666 32 15"/><polyline fill="transparent" points="0 7.166666666666666 3.5555555555555554 10.5 7.111111111111111 0.5 10.666666666666666 5.5 14.222222222222221 7.166666666666666 17.77777777777778 0.5 21.333333333333332 3.833333333333332 24.888888888888886 10.5 28.444444444444443 7.166666666666666 32 12.166666666666666" stroke="#169c81" stroke-width="1" stroke-linecap="square"/></svg>
-                                                <h5><strong>28</strong> Orders</h5>
-                                            </div>
-                                        </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12 index_stat_chart">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="http://demo.metinfo.cn/admin/index.php?lang=cn&amp;n=appstore&amp;c=appstore&amp;a=doappdetail&amp;type=app&amp;no=10071&amp;anyid=65"><img src="./10071.png" class="media-object" width="80"></a>
                                     </div>
-
-                                    <div class="m-t-md">
-                                        <h4>Title</h4>
-                                        <div>
-                                            <ul class="list-group">
-                                                <li class="list-group-item">
-                                                    <span class="badge badge-primary">16</span>
-                                                    General topic
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <span class="badge badge-info">12</span>
-                                                    The generated Lorem
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <span class="badge badge-warning">7</span>
-                                                    There are many variations
-                                                </li>
-                                            </ul>
-                                        </div>
+                                    <div class="media-body">
+                                        <a href="http://demo.metinfo.cn/admin/index.php?lang=cn&amp;n=appstore&amp;c=appstore&amp;a=doappdetail&amp;type=app&amp;no=10071&amp;anyid=65">
+                                            <h4 class="media-heading">账号互通<span class="text-danger"></span></h4>
+                                            <p><p><span style="line-height: 1.42857;">通过帐号互通可以无缝整合支持UCenter系列的网站会员，实现用户的一站式注册、登录、退出，无需重复登录、注册、退出。</span></p><p><span style="line-height: 1.42857;"><span style="font-weight: 700; color: rgb(127, 127, 127); font-size: 12px; line-height: 17.1429px;"><br></span></span><br></p></p>
+                                        </a>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12 index_stat_chart">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="http://demo.metinfo.cn/admin/index.php?lang=cn&amp;n=appstore&amp;c=appstore&amp;a=doappdetail&amp;type=app&amp;no=10068&amp;anyid=65"><img src="./10068.png" class="media-object" width="80"></a>
+                                    </div>
+                                    <div class="media-body">
+                                        <a href="http://demo.metinfo.cn/admin/index.php?lang=cn&amp;n=appstore&amp;c=appstore&amp;a=doappdetail&amp;type=app&amp;no=10068&amp;anyid=65">
+                                            <h4 class="media-heading">网站安全检测<span class="text-danger"></span></h4>
+                                            <p><p>检测网站的安全性，文件夹可写权限，以及网站是否被黑，并删除隐藏的黑链，邮件通知管理员，时刻提升网站安全性。</p></p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12 index_stat_chart">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="http://demo.metinfo.cn/admin/index.php?lang=cn&amp;n=appstore&amp;c=appstore&amp;a=doappdetail&amp;type=app&amp;no=10043&amp;anyid=65"><img src="./10043.png" class="media-object" width="80"></a>
+                                    </div>
+                                    <div class="media-body">
+                                        <a href="http://demo.metinfo.cn/admin/index.php?lang=cn&amp;n=appstore&amp;c=appstore&amp;a=doappdetail&amp;type=app&amp;no=10043&amp;anyid=65">
+                                            <h4 class="media-heading">商城模块<span class="text-danger"></span></h4>
+                                            <p><p>一款非常适用于企业电子商务 B2C 的营销型功能模块。<br><br><a href="http://www.metinfo.cn/mshop/" target="_blank">详细介绍</a><br></p></p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12 index_stat_chart">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="http://demo.metinfo.cn/admin/index.php?lang=cn&amp;n=appstore&amp;c=appstore&amp;a=doappdetail&amp;type=app&amp;no=10007&amp;anyid=65"><img src="./10007.png" class="media-object" width="80"></a>
+                                    </div>
+                                    <div class="media-body">
+                                        <a href="http://demo.metinfo.cn/admin/index.php?lang=cn&amp;n=appstore&amp;c=appstore&amp;a=doappdetail&amp;type=app&amp;no=10007&amp;anyid=65">
+                                            <h4 class="media-heading">robots在线修改器<span class="text-danger"></span></h4>
+                                            <p>网站通过robots协议告诉搜索引擎哪些页面可以抓取，哪些页面不能抓取。此工具用来在线修改robots。</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12 index_stat_chart">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="http://demo.metinfo.cn/admin/index.php?lang=cn&amp;n=appstore&amp;c=appstore&amp;a=doappdetail&amp;type=app&amp;no=10046&amp;anyid=65"><img src="./10046.png" class="media-object" width="80"></a>
+                                    </div>
+                                    <div class="media-body">
+                                        <a href="http://demo.metinfo.cn/admin/index.php?lang=cn&amp;n=appstore&amp;c=appstore&amp;a=doappdetail&amp;type=app&amp;no=10046&amp;anyid=65">
+                                            <h4 class="media-heading">多语言自动识别<span class="text-danger"></span></h4>
+                                            <p><p>说明：自动识别访问者语言环境，打开对应语言的站点，实现更加人性化的站点访问体验。</p></p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-                            </div><!-- </div style="height: 1196px;"> -->
+                <section class="index_news">
+                    <h3>MetInfo 新闻<a href="http://www.metinfo.cn/" target="_blank">更多<i class="fa fa-angle-right"></i></a></h3>
+                    <div id="newslist" data-newslisturl="http://www.metinfo.cn/metv5news.php?fromurl=http://demo.metinfo.cn/&amp;action=json&amp;listnum=6"><ul><li><span>2017-05-31</span><a href="http://www.metinfo.cn/news/shownews1534.htm" style="color:#f00;" target="_blank" title="MetInfo 5.3.17版本更新公告">MetInfo 5.3.17版本更新公告</a></li><li><span>2017-04-01</span><a href="http://www.metinfo.cn/news/shownews1518.htm" target="_blank" title="MetInfo 5.3.16版本更新公告">MetInfo 5.3.16版本更新公告</a></li><li><span>2017-01-21</span><a href="http://www.metinfo.cn/news/shownews1516.htm" target="_blank" title="MetInfo 5.3.15 版本更新公告">MetInfo 5.3.15 版本更新公告</a></li><li><span>2016-12-30</span><a href="http://www.metinfo.cn/news/shownews1499.htm" target="_blank" title="MetInfo 5.3.14 版本更新公告">MetInfo 5.3.14 版本更新公告</a></li><li><span>2016-12-01</span><a href="http://www.metinfo.cn/news/shownews1498.htm" target="_blank" title="MetInfo 5.3.13 版本更新公告">MetInfo 5.3.13 版本更新公告</a></li><li><span>2016-10-31</span><a href="http://www.metinfo.cn/news/shownews1497.htm" target="_blank" title="MetInfo 5.3.12 版本更新公告">MetInfo 5.3.12 版本更新公告</a></li></ul></div>
+                </section>
 
-                        </div><!-- </div class="col-lg-3" style="background-color:#ebebed;"> -->
+            </div>
 
-                	</div>
+        </div>
+    </div>
 
-	
-</div>	
-	
+
+    <div class="clear"></div>
+
+    <div class="row m-t">
+    </div>
+
+
+</div>
+
 </div>
 
 

@@ -17,7 +17,6 @@ class GroupsController extends Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->beforeFilter('csrf', array('on'=>'post'));
 		$this->model = new Groups();
 		$this->info = $this->model->makeInfo( $this->module);
 		$this->access = $this->model->validAccess($this->info['id']);

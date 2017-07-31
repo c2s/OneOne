@@ -1,16 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-{{--*/ usort($tableGrid, "SiteHelpers::_sort") /*--}}
+	@php
+		usort($tableGrid, "SiteHelpers::_sort")
+	@endphp
   <div class="page-content row">
     <!-- Page header -->
     <div class="page-header">
-      <div class="page-title">
-        <h3> {{ $pageTitle }} <small>{{ $pageNote }}</small></h3>
-      </div>
-
       <ul class="breadcrumb">
-        <li><a href="{{ URL::to('dashboard') }}"> Dashboard </a></li>
+        <li><a href="{{ URL::to('dashboard') }}"> {{ Lang::get('core.m_dashboard') }} </a></li>
         <li class="active">{{ $pageTitle }}</li>
       </ul>	  
 	  

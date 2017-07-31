@@ -4,7 +4,7 @@
        <ul id="sidemenu" class="nav expanded-menu">
 		<li class="logo-header" >
 		 <a  href="{{ URL::to('dashboard')}}" >
-		 	@if(file_exists(public_path().'/admin/images/'.CNF_LOGO) && CNF_LOGO !='')
+		 	@if(file_exists(public_path().'/static/images/'.CNF_LOGO) && CNF_LOGO !='')
 		 	<img src="{{ asset('static/images/'.CNF_LOGO)}}" alt="{{ CNF_APPNAME }}" />
 		 	@else
 			<img src="{{ asset('static/images/logo.png')}}" alt="{{ CNF_APPNAME }}"  />

@@ -30,7 +30,8 @@ return array(
 	"registernew" => "注册新账号 ",
 	"backtosite" => " 返回首页 ",
 	"planexpiration" => "计划到期",
-	'invitationmail' => '邀请邮件',
+	"invitationmail" => '邀请邮件',
+	"frontend_template" => "前台主题",
 	
 /* grid , pagination */
 	"grid_displaying" 	=> "显示",
@@ -43,10 +44,10 @@ return array(
 		
 
 /* Menu navigation here */
-	"m_controlpanel"	=> "控制面板",
-	"m_dashboard" 		=> "仪表盘",
+	"m_controlpanel"	=> "管理后台",
+	"m_dashboard" 		=> "管理后台",
 	"m_setting" 		=> "设置", // updated apidevlab
-	"m_usersgroups" 	=> "用户和组",
+	"m_usersgroups" 	=> "用户管理",
 	"m_users" 			=> "用户",
 	"m_groups" 			=> "组",
 	"m_pagecms" 		=> "页面CMS",
@@ -73,12 +74,12 @@ return array(
 	"t_lfb"					=> "通过 Facebook 登录", // updated apidevlab
 	"t_lgoogle"				=> "通过 Google 登录", // updated apidevlab
 	"t_ltwit"				=> "通过 Twitter 登录", // updated apidevlab
-	"tab_siteinfo"			=> "一般设置", // Site Info updated apidevlab
+	"tab_siteinfo"			=> "网站信息", // Site Info updated apidevlab
 	"tab_loginsecurity"		=> "登录和安全",
 	"tab_email"				=> "邮件模板", // updated apidevlab
 	"tab_translation"			=> "翻译",
-	"fr_appname"			=> "应用名称 ",
-	"fr_appdesc"			=> "应用降顺排列",
+	"fr_appname"			=> "网站名称 ",
+	"fr_appdesc"			=> "网站描述",
 	"fr_comname"			=> "公司名称 ",
 	"fr_emailsys"			=> "邮件系统 ",
 	"fr_emailmessage"		=> "邮件消息 ",
@@ -163,10 +164,11 @@ return array(
 
 /* dashboard Interface */
 
-	"dash_i_module"					=> "模块",
-	"dash_i_setting"				=> "设置",
-	"dash_i_sitemenu"				=> "网站菜单",
-	"dash_i_usergroup"				=> "用户和组",
+	"dash_i_module"					=> "模块管理",
+	"dash_i_setting"				=> "菜单管理",
+	"dash_i_sitemenu"				=> "系统设置",
+	"dash_i_create_content"			=> "发布内容",
+	"dash_i_usergroup"				=> "用户管理",
 	"dash_module"					=> "管理现有的模块或者创建一个新的模块",
 	"dash_setting"					=> "设置应用程序的登录选项，名称，电子邮件等. ",
 	"dash_sitemenu"					=> "管理你的应用的前端或后端的菜单",
@@ -194,4 +196,11 @@ return array(
 	'login_email_placeholder'    => '请输入邮件地址',
 	'login_password_placeholder' => '密码',
 	'login_captcha_code_placeholder' => '验证码',
+
+	/*  backend other*/
+	"mb_date_format"              => "自定义时间格式",
+	"mb_metakey"                  => "前台网站关键词",
+	"mb_meta_description"         => "前台网站描述",
+	"mb_backend_logo"             => "管理后台Logo",
+	"mb_backend_logo_size_tips"   => "请上传尺寸为155px * 30px的图片"
 );

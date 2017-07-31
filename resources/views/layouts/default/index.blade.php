@@ -7,7 +7,6 @@
 		<title>{{ CNF_APPNAME }} | {{ $pageTitle}}</title>
 		<meta name="keywords" content="{{ $pageMetakey }}" />
 		<meta name="description" content="{{ $pageMetadesc }}" />
-		<meta name="Author" content="Mangopik [www.mangopik.com]" />
 
 		<!-- mobile settings -->
 		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />

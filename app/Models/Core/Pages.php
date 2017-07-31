@@ -1,10 +1,10 @@
 <?php namespace App\Models\Core;
 
-use App\Models\Sximo;
+use App\Models\HsCms;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 
-class Pages extends Sximo  {
+class Pages extends HsCms  {
 	
 	protected $table = 'tb_pages';
 	protected $primaryKey = 'pageID';

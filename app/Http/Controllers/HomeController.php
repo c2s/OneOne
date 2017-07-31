@@ -108,8 +108,8 @@ class HomeController extends Controller {
 				$this->data['pageTitle'] 	= $row->title;
 				$this->data['pageNote'] 	=  $row->note;
 				$this->data['breadcrumb'] 	= 'inactive';
-				$this->data['pageMetakey'] 	=   $row->metakey ;
-				$this->data['pageMetadesc'] =  $row->metadesc ;
+				$this->data['pageMetakey'] 	=  CNF_METAKEY;
+				$this->data['pageMetadesc'] =  CNF_METADESC;
 				$this->data['filename'] 	=  $row->filename;
 
 
@@ -127,7 +127,7 @@ class HomeController extends Controller {
 
 	}
 
-	public function  getLang($lang='en')
+	public function  getLang($lang = 'cn')
 	{
 		\Session::put('lang', $lang);
 		return  Redirect::back();

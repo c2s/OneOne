@@ -15,9 +15,9 @@
 
 
 <link rel="stylesheet" type="text/css" media="screen" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/themes/pepper-grinder/jquery-ui.css" />
-<script type="text/javascript" src="{{ asset('admin/js/plugins/elfinder/js/elfinder.min.js') }}"></script>
-<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('admin/js/plugins/elfinder/css/elfinder.min.css')}}" />
-<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('admin/js/plugins/elfinder/css/theme.css')}}" />
+<script type="text/javascript" src="{{ asset('static/js/plugins/elfinder/js/elfinder.min.js') }}"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('static/js/plugins/elfinder/css/elfinder.min.css')}}" />
+<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('static/js/plugins/elfinder/css/theme.css')}}" />
 
 
 
