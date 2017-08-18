@@ -21,7 +21,7 @@ class UserController extends Controller {
 
 	}
 	public function getRegister() {
-		if(CNF_REGIST =='false') :    
+		if(CNF_REGIST =='false') :
 			if(\Auth::check()):
 				 return Redirect::to('')->with('message',\SiteHelpers::alert('success','Youre already login'));
 			else:
@@ -37,12 +37,11 @@ class UserController extends Controller {
 
 	}
 
-	public function postCreate( Request $request) {
-	
-		$rules = array(
-			'firstname'=>'required|alpha_num|min:2',
-			'lastname'=>'required|alpha_num|min:2',
-			'email'=>'required|email|unique:tb_users',
+	public function postCreate( Request $request)
+    {
+        $rules = array(
+			'username'=>'required|alpha_num|min:2',
+			'email'=>'required|email|unique:users',
 			'password'=>'required|between:6,12|confirmed',
 			'password_confirmation'=>'required|between:6,12'
 			);	
@@ -54,8 +53,7 @@ class UserController extends Controller {
 			$code = rand(10000,10000000);
 			
 			$authen = new User;
-			$authen->first_name = $request->input('firstname');
-			$authen->last_name = $request->input('lastname');
+			$authen->first_name = $request->input('username');
 			$authen->email = trim($request->input('email'));
 			$authen->activation = $code;
 			$authen->group_id = 3;
@@ -64,8 +62,7 @@ class UserController extends Controller {
 			$authen->save();
 			
 			$data = array(
-				'firstname'	=> $request->input('firstname') ,
-				'lastname'	=> $request->input('lastname') ,
+				'username'	=> $request->input('username') ,
 				'email'		=> $request->input('email') ,
 				'password'	=> $request->input('password') ,
 				'code'		=> $code

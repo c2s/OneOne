@@ -32,7 +32,9 @@ return array(
 	"planexpiration" => "计划到期",
 	"invitationmail" => '邀请邮件',
 	"frontend_template" => "前台主题",
-	
+	"mail_system_select" => "发送邮件选择",
+	"required_configuration" => "需要相应的配置",
+
 /* grid , pagination */
 	"grid_displaying" 	=> "显示",
 	"grid_to" 			=> "To",
@@ -55,9 +57,9 @@ return array(
 	"m_logs" 			=> "活动日志",
 	"m_codebuilder" 	=> "代码生成器",
 	"m_blastemail" 		=> "Blast Email",
-	"m_myaccount" 		=> "我的账户",
+	"m_myaccount" 		=> "个人中心",
 	"m_logout" 			=> "注销",
-	"m_profile" 		=> "配置",
+	"m_profile" 		=> "个人资料",
 	"m_manual" 		=> "使用指南 ",
 
 /* Setting page translation */	
@@ -85,7 +87,7 @@ return array(
 	"fr_emailmessage"		=> "邮件消息 ",
 	"fr_enable"				=> "启用",
 	"fr_multilanguage"			=> "多语言",
-	"fr_mainlanguage"			=> "主语言",
+	"fr_mainlanguage"			=> "网站语言",
 	"fr_fronttemplate"			=> "前端模板",
 	"fr_appmode"			=> "应用方式",
 	"fr_appid"				=> "APP ID",
@@ -93,6 +95,7 @@ return array(
 	"fr_registrationdefault"		=> "默认组注册 ",
 	"fr_registrationsetting"	=> "注册设置",
 	"fr_registration"		=> "注册",
+	"fr_get_password"	     	=> "找回密码",
 	"fr_allowregistration"		=> "开放注册",
 	"fr_allowfrontend"			=> "开放前端",
 	"fr_registrationauto"		=> "自动激活 ",
@@ -102,8 +105,12 @@ return array(
 	"fr_emailsendto"				=> "发送到",
 	"fr_emailmessage"				=> "邮件内容",
 	"fr_emailtag"					=> "您可以使用",
-	
-	
+	"translation_manage"			=> "语言管理",
+	"translation_template_manage"   => "语言模板文件",
+	"save_btn"                      => "保存",
+	"clear_cache"                   => "清理缓存",
+	"clear_cache_and_log"           => "清理缓存与日志",
+
 /* submit */
 	"sb_savechanges"			=> "保存更改",
 	"sb_send"					=> "发送",

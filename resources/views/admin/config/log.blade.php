@@ -5,43 +5,43 @@
   <div class="page-content row">
 
 
-	<div class="page-content-wrapper">  
+	<div class="page-content-wrapper">
 	@if(Session::has('message'))
-	  
+
 		   {{ Session::get('message') }}
-	   
+
 	@endif
 	<ul class="parsley-error-list">
 		@foreach($errors->all() as $error)
 			<li>{{ $error }}</li>
 		@endforeach
-	</ul>		
+	</ul>
 <div class="block-content">
-	@include('sximo.config.tab')		
+	@include('admin.config.tab')
 <div class="tab-content">
-	  <div class="tab-pane active use-padding" id="info">	
+	  <div class="tab-pane active use-padding" id="info">
 	 {!! Form::open(array('url'=>'config/email/', 'class'=>'form-vertical row')) !!}
-	
-	<div class="col-sm-6 m-t">
-	
 
-		
+	<div class="col-sm-6 m-t">
+
+
+
 		  <div class="form-group">
-			<label for="ipt" class=" control-label"> Template Cache </label>		
-				
-		  </div>  
-		  
-		<div class="form-group">   
-			<a href="{{ URL::to('admin/config/clearlog') }}" class="btn btn-primary" ><i class="icon-remove3"></i> Clear cache and logs </a>
+			<label for="ipt" class=" control-label"> {{ Lang::get('core.clear_cache_and_log') }} </label>
+
+		  </div>
+
+		<div class="form-group">
+			<a href="{{ URL::to('admin/config/clearlog') }}" class="btn btn-primary" ><i class="icon-remove3"></i> {{ Lang::get('core.clear_cache') }} </a>
 		</div>
-	
+
   	</fieldset>
 
 
-	</div> 
+	</div>
 
 
- 	
+
  </div>
  {!! Form::close() !!}
 </div>

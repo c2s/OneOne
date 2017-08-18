@@ -20,8 +20,6 @@ class MenuController extends Controller {
 
 	public function getIndex( Request $request ,$id = null  )
 	{
-
-		
 		$pos = (!is_null($request->input('pos')) ? $request->input('pos') : 'top' );
 		$row = \DB::table('menu')->where('menu_id',$id)->get();
 		if(count($row)>=1)
@@ -29,7 +27,6 @@ class MenuController extends Controller {
 			
 			$rows = $row[0];
 			$this->data['row'] =  (array) $rows;
-
 
 			$this->data['menu_lang'] = json_decode($rows->menu_lang,true);    
 		} else {
@@ -119,7 +116,7 @@ class MenuController extends Controller {
 		);
 		$validator = Validator::make($request->all(), $rules);	
 		if ($validator->passes()) {
-			$data = $this->validatePost('tb_menu');
+			$data = $this->validatePost('menu');
 
 			//echo '<pre>'; print_r($data); echo '</pre>'; exit;
 			if(CNF_MULTILANG ==1)

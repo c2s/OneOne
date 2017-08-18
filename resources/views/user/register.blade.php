@@ -22,40 +22,34 @@
 		</ul>
 	
 	<div class="form-group has-feedback">
-		<label>{{ Lang::get('core.firstname') }}	 </label>
-	  {!! Form::text('firstname', null, array('class'=>'form-control', 'placeholder'=>'First Name' ,'required'=>'' )) !!}
-		<i class="icon-users form-control-feedback"></i>
-	</div>
-	
-	<div class="form-group has-feedback">
-		<label>{{ Lang::get('core.lastname') }}	 </label>
-	 {!! Form::text('lastname', null, array('class'=>'form-control', 'placeholder'=>'Last Name','required'=>'')) !!}
+		<label>{{ Lang::get('core.username') }}	 </label>
+	  {!! Form::text('username', null, array('class'=>'form-control', 'placeholder'=>'用户名' ,'required'=>'' )) !!}
 		<i class="icon-users form-control-feedback"></i>
 	</div>
 	
 	<div class="form-group has-feedback">
 		<label>{{ Lang::get('core.email') }}	 </label>
-	 {!! Form::text('email', null, array('class'=>'form-control', 'placeholder'=>'Email Address','required'=>'email')) !!}
+	 {!! Form::text('email', null, array('class'=>'form-control', 'placeholder'=>'例: root@mofei.org','required'=>'email')) !!}
 		<i class="icon-envelop form-control-feedback"></i>
 	</div>
 	
 	<div class="form-group has-feedback">
 		<label>{{ Lang::get('core.password') }}	</label>
-	 {!! Form::password('password', array('class'=>'form-control', 'placeholder'=>'Password','required'=>'')) !!}
+	 {!! Form::password('password', array('class'=>'form-control', 'placeholder'=>'密码','required'=>'')) !!}
 		<i class="icon-lock form-control-feedback"></i>
 	</div>
 	
 	<div class="form-group has-feedback">
 		<label>{{ Lang::get('core.repassword') }}	</label>
-	 {!! Form::password('password_confirmation', array('class'=>'form-control', 'placeholder'=>'Confirm Password','required'=>'')) !!}
+	 {!! Form::password('password_confirmation', array('class'=>'form-control', 'placeholder'=>'确认密码','required'=>'')) !!}
 		<i class="icon-lock form-control-feedback"></i>
 	</div>
     @if(CNF_RECAPTCHA =='true') 
     <div class="form-group has-feedback  animated fadeInLeft delayp1">
-        <label class="text-left"> Are u human ? </label>    
+        <label class="text-left"> 验证码</label>
         <br />
         {!! captcha_img() !!} <br /><br />
-        <input type="text" name="captcha" placeholder="Type Security Code" class="form-control" required/>
+        <input type="text" name="captcha" placeholder="输入验证码" class="form-control" required/>
 
         <div class="clr"></div>
     </div>

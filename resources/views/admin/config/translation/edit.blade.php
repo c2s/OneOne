@@ -6,18 +6,18 @@
     <!-- Page header -->
     <div class="page-header">
       <div class="page-title">
-        <h3> Translation   <small> Manage Language Translation </small></h3>
+        <h3> 语言管理   <small> 编辑语言模板 </small></h3>
       </div>
 
       <ul class="breadcrumb">
         <li><a href="{{ URL::to('dashboard') }}">{{ Lang::get('core.home') }}</a></li>
-		<li><a href="{{ URL::to('config') }}"> Error Logs </a></li>
+		<li><a href="{{ URL::to('admin/config/translation') }}"> 语言管理 </a></li>
       </ul>
 	</div> 	  
 
 
  	<div class="page-content-wrapper m-t">  
- 	@include('sximo.config.tab',array('active'=>'translation'))
+ 	@include('admin.config.tab',array('active'=>'translation'))
 	@if(Session::has('message'))
 	  
 		   {{ Session::get('message') }}
@@ -32,12 +32,12 @@
 	 
 <div class="tab-content m-t ">
 		<div class="sbox   animated fadeInUp"> 
-			<div class="sbox-title"> Languange Manager </div>
+			<div class="sbox-title"> {{ Lang::get('core.translation_manage') }} </div>
 			<div class="sbox-content"> 
 
 	<div class="col-sm-8">
 	
-		<h4> Languange Manager </h4>
+		<h4> {{ Lang::get('core.translation_template_manage') }} </h4>
 		<hr />
 		<ul class="nav nav-tabs" >
 		@foreach($files as $f)
@@ -52,8 +52,8 @@
 		<table class="table table-striped">
 			<thead>
 				<tr>
-					<th> Pharse </th>
-					<th> Translation </th>
+					<th> 语言模板 </th>
+					<th> 译文 </th>
 
 				</tr>
 			</thead>
@@ -87,7 +87,7 @@
 		</table>
 		<input type="hidden" name="lang" value="{{ $lang }}"  />
 		<input type="hidden" name="file" value="{{ $file }}"  />
-		<button type="submit" class="btn btn-info"> Save Translation</button>
+		<button type="submit" class="btn btn-info"> {{ Lang::get('core.save_btn') }}</button>
 		{!! Form::close() !!}
 
 	</div> 

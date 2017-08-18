@@ -178,8 +178,9 @@ class ConfigController extends Controller {
 			$val .= 	"define('CNF_ACTIVATION','".$request->input('CNF_ACTIVATION')."');\n";	
 			$val .= 	"define('CNF_MULTILANG','".CNF_MULTILANG."');\n";
 			$val .= 	"define('CNF_LANG','".CNF_LANG."');\n";		
-			$val .= 	"define('CNF_REGIST','".(!is_null($request->input('CNF_REGIST')) ? 'true':'false')."');\n";		
-			$val .= 	"define('CNF_FRONT','".(!is_null($request->input('CNF_FRONT')) ? 'true':'false')."');\n";		
+			$val .= 	"define('CNF_GET_PASSWORD','".(!is_null($request->input('CNF_GET_PASSWORD')) ? 'true':'false')."');\n";
+			$val .= 	"define('CNF_REGIST','".(!is_null($request->input('CNF_REGIST')) ? 'true':'false')."');\n";
+			$val .= 	"define('CNF_FRONT','".(!is_null($request->input('CNF_FRONT')) ? 'true':'false')."');\n";
 			$val .= 	"define('CNF_RECAPTCHA','".(!is_null($request->input('CNF_RECAPTCHA')) ? 'true':'false')."');\n";	
 			$val .= 	"define('CNF_THEME','".CNF_THEME."');\n";	
 			$val .= 	"define('CNF_RECAPTCHAPUBLICKEY','');\n";

@@ -44,54 +44,20 @@
 					<!-- right -->
 					<ul class="top-links list-inline pull-right">
 						@if(Auth::check())
-						<li class="text-welcome hidden-xs">Welcome to {{ CNF_APPNAME }}, <strong> {{ Session::get('fid')}}</strong></li>
+						<li class="text-welcome hidden-xs">欢迎回来: <strong> {{ Session::get('fid')}}</strong></li>
 						<li>
 							<a class="dropdown-toggle no-text-underline" data-toggle="dropdown" href="#"><i class="fa fa-user hidden-xs"></i> {{ Lang::get('core.m_myaccount') }}</a>
 							<ul class="dropdown-menu pull-right">
-								<li><a tabindex="-1" href="{{ url('dashboard') }}"><i class="fa fa-desktop"></i> Dashboard</a></li>
+								<li><a tabindex="-1" href="{{ url('dashboard') }}"><i class="fa fa-desktop"></i> 管理后台</a></li>
 								<li><a tabindex="-1" href="{{ url('user/profile?view=frontend') }}"><i class="fa fa-user"></i> {{ Lang::get('core.m_profile') }}</a></li>
 								<li class="divider"></li>
 								<li><a tabindex="-1" href="{{ url('user/logout') }}"><i class="glyphicon glyphicon-off"></i> {{ Lang::get('core.m_logout') }}</a></li>
-							</ul>
-						</li>
-						@else
-						<li class="text-welcome hidden-xs">Hello , <strong>Guest</strong></li>
-						<li>
-							<a class="dropdown-toggle no-text-underline" data-toggle="dropdown" href="#"><i class="fa fa-user hidden-xs"></i>{{ Lang::get('core.m_myaccount') }}</a>
-							<ul class="dropdown-menu pull-right">
-								<li><a tabindex="-1" href="{{ url('user/profile?view=frontend') }}"><i class="fa fa-history"></i> {{ Lang::get('core.signin') }} </a></li>
-								<li class="divider"></li>
-								<li><a tabindex="-1" href="{{ url('user/logout') }}"><i class="glyphicon glyphicon-off"></i> {{ Lang::get('core.signup') }}</a></li>
 							</ul>
 						</li>
 						@endif
 					</ul>
 
 					<!-- left -->
-					<ul class="top-links list-inline">
-						@if(CNF_MULTILANG ==1)
-
-							<?php
-							$flag ='en';
-							$langname = 'English';
-							foreach(SiteHelpers::langOption() as $lang):
-								if($lang['folder'] == $pageLang or $lang['folder'] == CNF_LANG) {
-									$flag = $lang['folder'];
-									$langname = $lang['name'];
-								}
-							endforeach;?>
-						<li>
-							<a class="dropdown-toggle no-text-underline" data-toggle="dropdown" href="#"><img class="flag-lang" src="{{ asset('static/images/flags/'.$flag.'.png') }}" width="16" height="11" alt="lang" /> {{ $langname }}</a>
-							<ul class="dropdown-langs dropdown-menu">
-								@foreach(SiteHelpers::langOption() as $lang)
-								<li><a tabindex="-1" href="{{ url('home/lang/'.$lang['folder'])}}"><img class="flag-lang" src="{{ asset('static/images/flags/'.$lang['folder'].'.png') }}" width="16" height="11" alt="lang" /> {{  $lang['name'] }}</a></li>
-								@endforeach
-
-							</ul>
-						</li>
-						@endif
-					</ul>
-
 				</div>
 			</div>
 			<!-- /Top Bar -->
@@ -109,7 +75,7 @@
 
 						<!-- Logo -->
 							<a class="logo pull-left" style="font-size:30px;" href="{{ url('')}}">
-							<img src="{{ asset('frontend/default/images/sximo_logo.png')}}" width="150" title="{{ CNF_APPNAME }} " style="height: 40px !important" />
+							<img src="{{ asset('frontend/default/images/logo-haocms.png')}}" width="150" title="{{ CNF_APPNAME }} " style="height: 40px !important" />
 
 							</a>
 
@@ -149,21 +115,21 @@
 							<img class="footer-logo" src="assets/images/logo-footer.png" alt="" />
 
 							<!-- Small Description -->
-							<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+							<p>本页面内容为网站演示数据，其为{{ CNF_APPNAME }} 站点演示。.</p>
 
 							<!-- Contact Address -->
 							<address>
 								<ul class="list-unstyled">
 									<li class="footer-sprite address">
-										PO Box 40125<br>
-										My Street St, Bandung<br>
-										Paradise E-5 Indonesia<br>
+										邮编 707777<br>
+										北京海淀区上地信息产业基地北区<br>
+										7号地块<br>
 									</li>
 									<li class="footer-sprite phone">
-										Phone: +62-888-411-6522
+										Phone: +86-888-888-8888
 									</li>
 									<li class="footer-sprite email">
-										<a href="mailto:support@yourname.com">support@company.com</a>
+										<a href="mailto:root@mofei.com">root@mofei.org</a>
 									</li>
 								</ul>
 							</address>
@@ -174,19 +140,19 @@
 						<div class="col-md-3">
 
 							<!-- Latest Blog Post -->
-							<h4 class="letter-spacing-1">LATEST NEWS</h4>
+							<h4 class="letter-spacing-1">最新动态</h4>
 							<ul class="footer-posts list-unstyled">
 								<li>
-									<a href="#">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue</a>
-									<small>29 June 2015</small>
+									<a href="#">bate版本 0.1.0发布，完成laravel从到Yii的正式迁移并不断更新</a>
+									<small>2017年08月</small>
 								</li>
 								<li>
-									<a href="#">Nullam id dolor id nibh ultricies</a>
-									<small>29 June 2015</small>
+									<a href="#">为使得项目更优雅, 选用laravel框架进行重构,以便于以后不断的更新升级</a>
+									<small>2016年05月</small>
 								</li>
 								<li>
-									<a href="#">Duis mollis, est non commodo luctus</a>
-									<small>29 June 2015</small>
+									<a href="#">{{ CNF_APPNAME }} 项目进入设计研发阶段,选用Yii2作为开发框架 </a>
+									<small>2017年01月</small>
 								</li>
 							</ul>
 							<!-- /Latest Blog Post -->
@@ -196,15 +162,15 @@
 						<div class="col-md-2">
 
 							<!-- Links -->
-							<h4 class="letter-spacing-1">EXPLORE SXIMO5</h4>
+							<h4 class="letter-spacing-1">网站地图</h4>
 							<ul class="footer-links list-unstyled">
-								<li><a href="{{ url('') }}">Home</a></li>
-								<li><a href="{{ url('about-us') }}">About Us</a></li>
-								<li><a href="{{ url('service') }}">Our Services</a></li>
-								<li><a href="{{ url('contact-us') }}">Contact Us</a></li>
-								<li><a href="{{ url('toc') }}"> Term of Condition </a></li>
-								<li><a href="{{ url('privacy') }}">Privacy</a></li>
-								<li><a href="#"> More Link Here</a></li>
+								<li><a href="{{ url('') }}">首页</a></li>
+								<li><a href="{{ url('about-us') }}">关于我们</a></li>
+								<li><a href="{{ url('service') }}">服务</a></li>
+								<li><a href="{{ url('contact-us') }}">联系我们</a></li>
+								<li><a href="{{ url('toc') }}"> 文档中心 </a></li>
+								<li><a href="{{ url('privacy') }}">问题讨论</a></li>
+								<li><a href="#"> 更多 >></a></li>
 
 							</ul>
 							<!-- /Links -->
@@ -214,15 +180,15 @@
 						<div class="col-md-4">
 
 							<!-- Newsletter Form -->
-							<h4 class="letter-spacing-1">KEEP IN TOUCH</h4>
-							<p>Subscribe to Our Newsletter to get Important News &amp; Offers</p>
+							<h4 class="letter-spacing-1">订阅分享</h4>
+							<p>留下您的订阅邮箱, 我们将定期给您发送最新动态</p>
 
 
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-									<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
+									<input type="email" id="email" name="email" class="form-control required" placeholder="输入邮箱地址">
 									<span class="input-group-btn">
-										<button class="btn btn-success" type="submit">Subscribe</button>
+										<button class="btn btn-success" type="submit">订阅</button>
 									</span>
 								</div>
 
@@ -232,8 +198,8 @@
 							<div class="margin-top-20">
 								<a href="#" class="social-icon social-icon-border social-facebook pull-left" data-toggle="tooltip" data-placement="top" title="Facebook">
 
-									<i class="icon-facebook"></i>
-									<i class="icon-facebook"></i>
+									<i class="icon-weibo"></i>
+									<i class="icon-weibo"></i>
 								</a>
 
 								<a href="#" class="social-icon social-icon-border social-twitter pull-left" data-toggle="tooltip" data-placement="top" title="Twitter">
@@ -242,13 +208,13 @@
 								</a>
 
 								<a href="#" class="social-icon social-icon-border social-gplus pull-left" data-toggle="tooltip" data-placement="top" title="Google plus">
-									<i class="icon-gplus"></i>
-									<i class="icon-gplus"></i>
+									<i class="icon-facebook"></i>
+									<i class="icon-facebook"></i>
 								</a>
 
 								<a href="#" class="social-icon social-icon-border social-linkedin pull-left" data-toggle="tooltip" data-placement="top" title="Linkedin">
-									<i class="icon-linkedin"></i>
-									<i class="icon-linkedin"></i>
+									<i class="icon-gplus"></i>
+									<i class="icon-gplus"></i>
 								</a>
 
 								<a href="#" class="social-icon social-icon-border social-rss pull-left" data-toggle="tooltip" data-placement="top" title="Rss">
@@ -268,11 +234,11 @@
 				<div class="copyright">
 					<div class="container">
 						<ul class="pull-right nomargin list-inline mobile-block">
-							<li><a href="{{ url('toc')}}">Terms &amp; Conditions</a></li>
+							<li><a href="{{ url('toc')}}">地图</a></li>
 							<li>&bull;</li>
-							<li><a href="{{ url('privacy')}}">Privacy</a></li>
+							<li><a href="{{ url('privacy')}}">联系</a></li>
 						</ul>
-						&copy; All Rights Reserved, {{ CNF_APPNAME}}
+						Copyright &copy; 2016-2017 当使用本站时，代表您已接受了本站的使用条款和隐私条款。版权所有，保留一切权利。{{ CNF_APPNAME}}
 					</div>
 				</div>
 			</footer>

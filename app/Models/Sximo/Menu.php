@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Menu extends HsCms {
 
-	protected $table 		= 'tb_menu';
+	protected $table 		= 'menu';
 	protected $primaryKey 	= 'menu_id';
 
 	public function __construct() {

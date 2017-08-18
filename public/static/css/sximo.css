@@ -1621,12 +1621,12 @@ code {
 
   width: 400px;
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   margin-top: -250px;
   margin-left: -200px;
-  z-index: 100; padding:20px; 
-  
+  z-index: 100; padding:20px;
+  opacity: 0.8;
 }
 .middle-box .logo-login {
   border-bottom:dashed 1px #ddd; padding:0px 0 10px;  text-align:center;
@@ -1637,7 +1637,30 @@ code {
 }
 
 
+.admin-login-box {
+    left: 50%;
+    margin: auto auto auto -180px;
+    position: absolute;
+    text-align: center;
+    top: 10%;
+    width: 360px;
+    opacity: 0.8;
+}
 
+.admin-login-body-background {
+    background-color: #000;
+    overflow: hidden;
+}
+
+.login-logo{
+    text-align: center;
+    height: 50px;
+}
+
+.login-logo-a{
+    font-size: 30px;
+    color: #fff !important;
+}
 
 @media (min-width: 768px) {
   #page-wrapper {

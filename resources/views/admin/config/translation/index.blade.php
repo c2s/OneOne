@@ -8,11 +8,11 @@
 
 
 	<div class="page-content-wrapper m-t">  	
-	@include('sximo.config.tab',array('active'=>'translation'))
+	@include('admin.config.tab',array('active'=>'translation'))
 	 <div class="tab-pane active use-padding" id="info">	
 <div class="tab-content m-t ">
 		<div class="sbox   animated fadeInUp"> 
-			<div class="sbox-title"> Languange Manager </div>
+			<div class="sbox-title"> {{ Lang::get('core.translation_manage') }} </div>
 			<div class="sbox-content"> 		 
 
 	@if(Session::has('message'))
@@ -30,15 +30,15 @@
 	
 	<div class="col-sm-9">
 		
-		<a href="{{ URL::to('admin/config/addtranslation')}} " onclick="SximoModal(this.href,'Add New Language');return false;" class="btn btn-primary"><i class="fa fa-plus-circle"></i> Add New Translation </a>
+		<a href="{{ URL::to('admin/config/addtranslation')}} " onclick="SximoModal(this.href,'新增语言');return false;" class="btn btn-primary"><i class="fa fa-plus-circle"></i> 新增语言 </a>
 		<hr />
 		<table class="table table-striped">
 			<thead>
 				<tr>
-					<th> Name </th>
-					<th> Folder </th>
-					<th> Author </th>
-					<th> Action </th>
+					<th> 名称 </th>
+					<th> 别名 </th>
+					<th> 作者 </th>
+					<th> 操作 </th>
 				</tr>
 			</thead>
 			<tbody>		
@@ -49,10 +49,11 @@
 					<td> {{  $lang['folder'] }} </td>
 					<td> {{  $lang['author'] }} </td>
 				  	<td>
-					@if($lang['folder'] !='en')
-					<a href="{{ URL::to('admin/config/translation?edit='.$lang['folder'])}} " class="btn btn-sm btn-primary"> Manage </a>
-					<a href="{{ URL::to('admin/config/removetranslation/'.$lang['folder'])}} " class="btn btn-sm btn-danger"> Delete </a>
-					 
+						<a href="{{ URL::to('admin/config/translation?edit='.$lang['folder'])}} " class="btn btn-sm btn-primary"> 编辑 </a>
+					@if($lang['folder'] !='en' && $lang['folder'] !='cn' )
+					<a href="{{ URL::to('admin/config/removetranslation/'.$lang['folder'])}} " class="btn btn-sm btn-danger"> 删除 </a>
+						@else
+							<span>&nbsp;&nbsp;&nbsp;&nbsp;网站主体语言不能被删除</span>
 					@endif 
 				
 				</td>

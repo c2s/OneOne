@@ -58,7 +58,7 @@ class Kernel extends HttpKernel
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'ipBlocked' => \App\Http\Middleware\IpBlocked::class,
-        'sximoAuth' => \App\Http\Middleware\HaoSoftAuthMiddleware::class,
-        'haoSoftAuth' => \App\Http\Middleware\HaoSoftAuthMiddleware::class,
+        'sximoAuth' => \App\Http\Middleware\OneOneAuth::class,
+        'haoSoftAuth' => \App\Http\Middleware\OneOneAuth::class,
     ];
 }

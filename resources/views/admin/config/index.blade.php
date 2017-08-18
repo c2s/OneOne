@@ -19,7 +19,7 @@
 
 
 <div class="block-content">
-	@include('sximo.config.tab')
+	@include('admin.config.tab')
 <div class="tab-content m-t">
   <div class="tab-pane active use-padding" id="info">
   <div class="sbox  ">

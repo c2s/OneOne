@@ -36,7 +36,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title"> The Application is <br /> not available for your IP </div>
+                <div class="title"> 404 <br /> Not Find This Page </div>
             </div>
         </div>
     </body>

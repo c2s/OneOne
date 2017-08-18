@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Users extends HsCms  {
 	
-	protected $table = 'tb_users';
+	protected $table = 'users';
 	protected $primaryKey = 'id';
 
 	public function __construct() {

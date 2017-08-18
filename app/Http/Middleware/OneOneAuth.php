@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-class HaoSoftAuthMiddleware
+class OneOneAuth
 {
     /**
      * Handle an incoming request.

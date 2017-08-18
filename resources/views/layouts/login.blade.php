@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,6 +18,7 @@
 		<script type="text/javascript" src="{{ asset('static/js/plugins/parsley.js') }}"></script>
 		<script type="text/javascript" src="{{ asset('static/js/plugins/bootstrap/js/bootstrap.js') }}"></script>
 		<script type="text/javascript" src="{{ asset('static/js/plugins/jquery.form.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('static/js/login_background.js') }}"></script>
 
 		<!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -27,7 +28,9 @@
 		
 	
   	</head>
-<body class="gray-bg">
+<body class="gray-bg admin-login-body-background">
+<canvas></canvas>
+
     <div class="middle-box  ">
         <div>
 
@@ -37,5 +40,7 @@
 
 
 
-</body> 
+</body>
+
+
 </html>
