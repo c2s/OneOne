@@ -1,6 +1,6 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
+    "name": "mofei/oneone",
+    "description": "The OneOne Content management framework based on the latest Laravel version.",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",

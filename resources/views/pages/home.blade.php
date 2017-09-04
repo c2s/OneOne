@@ -1,7 +1,7 @@
 			<div class="slider" >
 				<div class="container text-center" style="padding-top:140px;">
 						
-					<h1 data-wow-delay="0.4s" class="nomargin size-50 weight-300 wow fadeInUp animated" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp; "><span>{{ CNF_APPNAME }}</span><span style="color:#fff"> 由Laravel 5.4驱动,功能强大超乎想象 </span></h1>
+					<h1 data-wow-delay="0.4s" class="nomargin size-50 weight-300 wow fadeInUp animated" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp; "><span>{{ CNF_APPNAME }}</span><span style="color:#fff"> 由Laravel 5.5驱动,功能强大超乎想象 </span></h1>
 					<p data-wow-delay="0.7s" class="lead font-lato size-30 wow fadeInUp animated" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp; color: white"> 致力于让开发工作变得简单的内容管理框架 </p>
 					<span data-wow-delay="1.1s" class="label label-danger wow fadeInUp animated" style="visibility: visible; animation-delay: 1.1s; animation-name: fadeInUp;">Version 1.0.0</span>
 
