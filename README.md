@@ -12,10 +12,10 @@ OneOne是一个PHP开源的内容管理框架, 基于最新Laravel 5.5 版本开
 
 详情参考 https://one.mofei.org
 
+![index](public/static/images/oneone/oneone-f1.png)
+
 ![login](public/static/images/oneone/oneone-b2.png)
 
 ![backend_2](public/static/images/oneone/oneone-b1a.png)
 
 ![backend 1](public/static/images/oneone/oneone-b3.png)
-
-![index](public/static/images/oneone/oneone-f1.png)
